@@ -138,6 +138,7 @@ logoutBtn.addEventListener('click', () => {
 adminLogoutBtn.addEventListener('click', () => {
     adminLandingPage.classList.add('hidden');
     loginPage.classList.remove('hidden');
+    resetUserSession();
 });
 
 backToDashboard.addEventListener('click', () => {
