@@ -1,0 +1,473 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/***********************************************************************************************/
+.gradient-bg {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+}
+
+.card-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.symptom-chip {
+    transition: all 0.3s ease;
+}
+
+.symptom-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Login Page */
+/***********************************************************************************************/
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-wrapper {
+    display: inline-flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-login-tab, .admin-login-tab {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.user-login-tab {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.admin-login-tab {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.user-login-tab:hover, .admin-login-tab:hover {
+    opacity: 0.8;
+}
+
+/* Form Elements */
+.input-group, .checkbox-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.generate-username {
+    display: inline-block;
+    margin-top: 5px;
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.generate-username:hover {
+    color: #0056b3;
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+.checkbox-label {
+    font-size: 14px;
+}
+
+/* Buttons */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Hidden Form */
+.hidden {
+    display: none;
+}
+
+/*****************************************************************************/
+/* Header Styling */
+.header {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin: 0;
+}
+
+.header-subtitle {
+    color: #4b5563;
+    margin: 0;
+}
+
+/* User Info Section */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-token {
+    background-color: #bfdbfe;
+    color: #1e3a8a;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logout-button {
+    color: #4b5563;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    color: #1f2937;
+}
+
+/************************************************************************************/
+/* Appointment Container */
+.appointment-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.patient-form {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.symptom-selection, .doctor-recommendation {
+    margin-bottom: 20px;
+}
+
+.symptom-label, .doctor-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.symptom-list, .selected-symptoms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.symptom-chip {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+    border: none;
+    cursor: pointer;
+}
+
+.symptom-chip:hover {
+    background-color: #d1e7ff;
+    color: #004085;
+}
+
+/* Appointment Details */
+.appointment-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0;
+    color: #333;
+}
+
+.appointment-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.input-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #555;
+}
+
+.input-field {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* Location Access */
+.location-access {
+    margin-top: 12px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.checkbox {
+    margin-right: 8px;
+}
+
+/* Nearest Clinics */
+.nearest-clinics {
+    margin-top: 16px;
+}
+
+.clinic-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.clinic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.clinic-option {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.radio {
+    margin-right: 8px;
+}
+
+/* Confirm Button */
+.confirm-btn {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Quick Info Panel */
+.info-panel {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.info-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.info-section {
+    margin-bottom: 12px;
+}
+
+.info-subtitle {
+    font-size: 14px;
+    color: #555;
+}
+
+.info-detail {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Emergency Contacts */
+.emergency-contacts {
+    margin-top: 16px;
+}
+
+.contact-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.contact-icon {
+    margin-right: 8px;
+    color: #dc3545;
+}
+
+.contact-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-number {
+    font-size: 12px;
+    color: #555;
+}
+
+/* Responsive Layout */
+@media (min-width: 1024px) {
+    .appointment-container {
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+}
