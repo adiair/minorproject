@@ -15,157 +15,256 @@
     <div id="loginPage" class="min-h-screen flex items-center justify-center gradient-bg p-4">
         <div class="bg-white rounded-xl p-8 w-full max-w-md card-shadow">
             <div class="text-center mb-8">
+                
                 <h1 class="text-3xl font-bold text-blue-800">WELLCARE</h1>
                 <p class="text-gray-600 mt-2">Doctor Appointment System</p>
             </div>
-            
+
             <div class="flex justify-center mb-6">
                 <div class="inline-flex rounded-md shadow-sm">
-                    <button id="userLoginTab" class="px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="userLoginTab"
+                        class="px-4 py-2 text-sm font-medium rounded-l-lg bg-blue-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                         Patient Login
                     </button>
-                    <button id="adminLoginTab" class="px-4 py-2 text-sm font-medium rounded-r-lg bg-gray-200 text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button id="adminLoginTab"
+                        class="px-4 py-2 text-sm font-medium rounded-r-lg bg-gray-200 text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         Admin Login
                     </button>
                 </div>
             </div>
-            
+
             <!-- User Login Form -->
             <div id="userLoginForm">
                 <div class="mb-4">
                     <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username/Token</label>
-                    <input type="text" id="username" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="WC-XXXXXX">
-                    <button id="generateUsername" class="mt-2 text-sm text-blue-600 hover:text-blue-800">Auto Generate Username/Token</button>
+                    <input type="text" id="username"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="WC-XXXXXX">
+                    <button id="generateUsername" class="mt-2 text-sm text-blue-600 hover:text-blue-800">Auto Generate
+                        Username/Token</button>
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                    <input type="password" id="password" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your password">
+                    <input type="password" id="password"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter your password">
                 </div>
                 <div class="mb-4 flex items-center">
-                    <input type="checkbox" id="emergency" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                    <input type="checkbox" id="emergency"
+                        class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
                     <label for="emergency" class="ml-2 block text-sm text-gray-700">Emergency Appointment</label>
                 </div>
-                <button id="userLoginBtn" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <button id="userLoginBtn"
+                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Login
                 </button>
             </div>
-            
+
             <!-- Admin Login Form (Hidden by default) -->
             <div id="adminLoginForm" class="hidden">
                 <div class="mb-4">
                     <label for="adminUsername" class="block text-sm font-medium text-gray-700 mb-1">Admin ID</label>
-                    <input type="text" id="adminUsername" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter admin ID">
+                    <input type="text" id="adminUsername"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter admin ID">
                 </div>
                 <div class="mb-4">
                     <label for="adminPassword" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                    <input type="password" id="adminPassword" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter password">
+                    <input type="password" id="adminPassword"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter password">
                 </div>
-                <button id="adminLoginBtn" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <button id="adminLoginBtn"
+                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Login as Admin
                 </button>
             </div>
         </div>
     </div>
-    
+
     <!-- User Landing Page (Hidden by default) -->
     <div id="userLandingPage" class="hidden min-h-screen p-6">
         <header class="bg-white shadow-sm rounded-lg p-4 mb-6 flex justify-between items-center">
             <div>
-                <h1 class="text-2xl font-bold text-blue-800">WELLCARE</h1>
+                <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                    <i class="fas fa-heartbeat text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-blue-600">WellCare</span>
+            </div>
                 <p class="text-gray-600">Your Health, Our Priority</p>
             </div>
             <div class="flex items-center space-x-4">
-                <span id="userTokenDisplay" class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"></span>
+                <span id="userTokenDisplay"
+                    class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"></span>
                 <button id="logoutBtn" class="text-gray-600 hover:text-gray-800">
                     <i class="fas fa-sign-out-alt"></i> Logout
                 </button>
             </div>
         </header>
-        
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient text-white py-16 md:py-24">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Find & Book Appointments with Top Doctors</h1>
+                    <p class="text-xl mb-8 opacity-90">Access to 10,000+ healthcare providers across all specialties.
+                        Book instantly online 24/7.</p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <button id="findDoctorHero"
+                            class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all">
+                            <i class="fas fa-search mr-2"></i>Book An Appointment
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://img.freepik.com/free-vector/doctor-character-background_1270-84.jpg"
+                        alt="Doctor illustration" class="w-full max-w-md rounded-lg shadow-xl">
+                </div>
+            </div>
+        </section>
+        <!-- How It Works -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center px-6">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-blue-600 text-2xl font-bold">1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Book Appointment</h3>
+                        <p class="text-gray-600">Select your preferred date and time. Instant confirmation with no phone
+                            calls needed.</p>
+                    </div>
+                    <div class="text-center px-6">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-blue-600 text-2xl font-bold">2</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">Find a Doctor</h3>
+                        <p class="text-gray-600">Search by specialty, location, or doctor name. Read reviews and check
+                            availability.</p>
+                    </div>
+                    <div class="text-center px-6">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-blue-600 text-2xl font-bold">3</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Visit Doctor</h3>
+                        <p class="text-gray-600">Get reminders before your appointment. Complete paperwork online to
+                            save time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Patient Form -->
             <div class="bg-white rounded-xl shadow-md p-6 lg:col-span-2">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Book Your Appointment</h2>
-                
+
                 <div class="mb-6">
                     <label class="block text-sm font-medium text-gray-700 mb-2">Select Your Symptoms</label>
                     <div class="flex flex-wrap gap-2">
-                        <button class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" data-symptom="fever">Fever</button>
-                        <button class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" data-symptom="cough">Cough</button>
-                        <button class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" data-symptom="headache">Headache</button>
-                        <button class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" data-symptom="stomachache">Stomachache</button>
-                        <button class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" data-symptom="fatigue">Fatigue</button>
-                        <button class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" data-symptom="dizziness">Dizziness</button>
+                        <button
+                            class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                            data-symptom="fever">Fever</button>
+                        <button
+                            class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                            data-symptom="cough">Cough</button>
+                        <button
+                            class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                            data-symptom="headache">Headache</button>
+                        <button
+                            class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                            data-symptom="stomachache">Stomachache</button>
+                        <button
+                            class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                            data-symptom="fatigue">Fatigue</button>
+                        <button
+                            class="symptom-chip px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700"
+                            data-symptom="dizziness">Dizziness</button>
                     </div>
                     <div id="selectedSymptoms" class="mt-3 flex flex-wrap gap-2"></div>
                 </div>
-                
+
                 <div class="mb-6">
                     <label class="block text-sm font-medium text-gray-700 mb-2">Recommended Doctors</label>
                     <div id="recommendedDoctors" class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         <!-- Doctors will be populated here based on symptoms -->
                     </div>
                 </div>
-                
+
                 <div id="doctorSelection" class="hidden">
                     <div class="border-t pt-4 mt-4">
                         <h3 class="text-lg font-medium text-gray-800 mb-3">Complete Your Appointment</h3>
-                        
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label for="patientName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                                <input type="text" id="patientName" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <label for="patientName" class="block text-sm font-medium text-gray-700 mb-1">Full
+                                    Name</label>
+                                <input type="text" id="patientName"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <div>
                                 <label for="patientAge" class="block text-sm font-medium text-gray-700 mb-1">Age</label>
-                                <input type="number" id="patientAge" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <input type="number" id="patientAge"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <div>
-                                <label for="appointmentDate" class="block text-sm font-medium text-gray-700 mb-1">Date</label>
-                                <input type="date" id="appointmentDate" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <label for="appointmentDate"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                                <input type="date" id="appointmentDate"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <div>
-                                <label for="appointmentTime" class="block text-sm font-medium text-gray-700 mb-1">Time</label>
-                                <input type="time" id="appointmentTime" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <label for="appointmentTime"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                                <input type="time" id="appointmentTime"
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                             </div>
                         </div>
-                        
+
                         <div class="mt-4">
                             <label for="locationAccess" class="flex items-center">
-                                <input type="checkbox" id="locationAccess" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                                <span class="ml-2 block text-sm text-gray-700">Enable location access to find nearest clinics</span>
+                                <input type="checkbox" id="locationAccess"
+                                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                                <span class="ml-2 block text-sm text-gray-700">Enable location access to find nearest
+                                    clinics</span>
                             </label>
                         </div>
-                        
+
                         <div id="nearestClinics" class="mt-4 hidden">
                             <label class="block text-sm font-medium text-gray-700 mb-2">Nearby Clinics</label>
                             <div class="space-y-2">
                                 <div class="flex items-center p-3 border rounded-lg hover:bg-blue-50 cursor-pointer">
-                                    <input type="radio" name="clinic" id="clinic1" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                    <input type="radio" name="clinic" id="clinic1"
+                                        class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
                                     <label for="clinic1" class="ml-3 block text-sm text-gray-700">
                                         <span class="font-medium">City Health Clinic</span> - 1.2 km away
                                     </label>
                                 </div>
                                 <div class="flex items-center p-3 border rounded-lg hover:bg-blue-50 cursor-pointer">
-                                    <input type="radio" name="clinic" id="clinic2" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                    <input type="radio" name="clinic" id="clinic2"
+                                        class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
                                     <label for="clinic2" class="ml-3 block text-sm text-gray-700">
                                         <span class="font-medium">Wellness Medical Center</span> - 2.5 km away
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        
-                        <button id="confirmAppointmentBtn" class="mt-6 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+
+                        <button id="confirmAppointmentBtn"
+                            class="mt-6 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                             Confirm Appointment
                         </button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Quick Info Panel -->
             <div class="bg-white rounded-xl shadow-md p-6">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Your Information</h2>
-                
+
                 <div class="space-y-4">
                     <div>
                         <h3 class="text-sm font-medium text-gray-500">Token Number</h3>
@@ -180,7 +279,7 @@
                         <p id="infoWaitTime" class="text-lg font-semibold text-gray-700">-</p>
                     </div>
                 </div>
-                
+
                 <div class="mt-8">
                     <h3 class="text-sm font-medium text-gray-500 mb-2">Emergency Contacts</h3>
                     <div class="space-y-2">
@@ -206,8 +305,93 @@
                 </div>
             </div>
         </div>
+        <br>
+        <!-- Footer -->
+        <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heartbeat text-white text-xl"></i>
+                            </div>
+                            <span class="text-2xl font-bold">WellCare</span>
+                        </div>
+                        <p class="text-gray-400 mb-4">Making healthcare accessible and convenient for everyone.</p>
+                        <!-- <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div> -->
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition-all">Home</a></li>
+                            <!-- <li><a href="#doctors" class="text-gray-400 hover:text-white transition-all">Find a
+                                    Doctor</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition-all">Services</a>
+                            </li> -->
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-all">About Us</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Primary Care</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Specialty Care</a>
+                            </li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Virtual Visits</a>
+                            </li>
+                            <!-- <li><a href="#" class="text-gray-400 hover:text-white transition-all">Urgent Care</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Preventive Care</a> -->
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Contact Us</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-3 text-gray-400"></i>
+                                <span class="text-gray-400">123 Health Street, Indore , 460001</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-3 text-gray-400"></i>
+                                <span class="text-gray-400">(800) 555-1234</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-3 text-gray-400"></i>
+                                <span class="text-gray-400">hello@wellcare.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2023 WellCare. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    
+
     <!-- Receipt Page (Hidden by default) -->
     <div id="receiptPage" class="hidden min-h-screen p-6 bg-gray-50">
         <div class="max-w-4xl mx-auto">
@@ -217,7 +401,7 @@
                     <i class="fas fa-arrow-left mr-2"></i> Back to Dashboard
                 </button>
             </div>
-            
+
             <div class="bg-white rounded-xl shadow-md overflow-hidden">
                 <!-- Receipt Header -->
                 <div class="bg-blue-600 px-6 py-4">
@@ -231,29 +415,36 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Receipt Content -->
                 <div class="p-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <h3 class="text-lg font-semibold text-gray-800 mb-3">Patient Details</h3>
                             <div class="space-y-2">
-                                <p><span class="font-medium text-gray-700">Name:</span> <span id="receiptName">John Doe</span></p>
-                                <p><span class="font-medium text-gray-700">Age:</span> <span id="receiptAge">32</span></p>
-                                <p><span class="font-medium text-gray-700">Symptoms:</span> <span id="receiptSymptoms">Fever, Headache</span></p>
+                                <p><span class="font-medium text-gray-700">Name:</span> <span id="receiptName">John
+                                        Doe</span></p>
+                                <p><span class="font-medium text-gray-700">Age:</span> <span id="receiptAge">32</span>
+                                </p>
+                                <p><span class="font-medium text-gray-700">Symptoms:</span> <span
+                                        id="receiptSymptoms">Fever, Headache</span></p>
                             </div>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold text-gray-800 mb-3">Appointment Details</h3>
                             <div class="space-y-2">
-                                <p><span class="font-medium text-gray-700">Doctor:</span> <span id="receiptDoctor">Dr. Sarah Johnson</span></p>
-                                <p><span class="font-medium text-gray-700">Specialization:</span> <span id="receiptSpecialization">General Physician</span></p>
-                                <p><span class="font-medium text-gray-700">Date & Time:</span> <span id="receiptDateTime">15 June 2023, 10:30 AM</span></p>
-                                <p><span class="font-medium text-gray-700">Location:</span> <span id="receiptLocation">City Health Clinic, Main Street</span></p>
+                                <p><span class="font-medium text-gray-700">Doctor:</span> <span id="receiptDoctor">Dr.
+                                        Sarah Johnson</span></p>
+                                <p><span class="font-medium text-gray-700">Specialization:</span> <span
+                                        id="receiptSpecialization">General Physician</span></p>
+                                <p><span class="font-medium text-gray-700">Date & Time:</span> <span
+                                        id="receiptDateTime">15 June 2023, 10:30 AM</span></p>
+                                <p><span class="font-medium text-gray-700">Location:</span> <span
+                                        id="receiptLocation">City Health Clinic, Main Street</span></p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mt-8">
                         <h3 class="text-lg font-semibold text-gray-800 mb-3">Important Notes</h3>
                         <ul class="list-disc pl-5 space-y-1 text-sm text-gray-600">
@@ -263,15 +454,16 @@
                             <li>Emergency? Call our hotline at 102 immediately.</li>
                         </ul>
                     </div>
-                    
+
                     <div class="mt-8 flex justify-center">
-                        <button id="printReceipt" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button id="printReceipt"
+                            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <i class="fas fa-print mr-2"></i> Print Receipt
                         </button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Previous Appointments -->
             <div class="mt-8 bg-white rounded-xl shadow-md p-6">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Previous Appointments</h2>
@@ -279,22 +471,32 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Doctor</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Symptoms</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Date</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Doctor</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Symptoms</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Status</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10 May 2023</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Michael Chen</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Michael
+                                    Chen</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Fever, Cough</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600">Completed</td>
                             </tr>
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">22 April 2023</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Lisa Park</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Lisa Park
+                                </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Stomachache</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600">Completed</td>
                             </tr>
@@ -303,8 +505,9 @@
                 </div>
             </div>
         </div>
+
     </div>
-    
+
     <!-- Admin Landing Page (Hidden by default) -->
     <div id="adminLandingPage" class="hidden min-h-screen p-6 bg-gray-100">
         <header class="bg-white shadow-sm rounded-lg p-4 mb-6 flex justify-between items-center">
@@ -316,7 +519,7 @@
                 <i class="fas fa-sign-out-alt"></i> Logout
             </button>
         </header>
-        
+
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
             <!-- Admin Quick Stats -->
             <div class="bg-white rounded-xl shadow-md p-6">
@@ -364,7 +567,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Admin Main Content -->
         <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Pending Appointments -->
@@ -376,38 +579,43 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Doctor Assignment -->
             <div class="bg-white rounded-xl shadow-md p-6">
                 <h2 class="text-xl font-semibold text-gray-800 mb-4">Assign Doctor</h2>
-                
+
                 <div class="mb-4">
                     <label for="selectToken" class="block text-sm font-medium text-gray-700 mb-1">Select Token</label>
-                    <select id="selectToken" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    <select id="selectToken"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         <option value="">Select a token</option>
                         <!-- Tokens will be populated here -->
                     </select>
                 </div>
-                
+
                 <div class="mb-4">
                     <label for="selectDoctor" class="block text-sm font-medium text-gray-700 mb-1">Select Doctor</label>
-                    <select id="selectDoctor" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    <select id="selectDoctor"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                         <option value="">Select a doctor</option>
                         <option value="dr1">Dr. Sarah Johnson (General Physician)</option>
                         <option value="dr2">Dr. Michael Chen (Cardiologist)</option>
                         <option value="dr3">Dr. Lisa Park (Pediatrician)</option>
                     </select>
                 </div>
-                
+
                 <div class="mb-4">
-                    <label for="appointmentTimeAdmin" class="block text-sm font-medium text-gray-700 mb-1">Appointment Time</label>
-                    <input type="datetime-local" id="appointmentTimeAdmin" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    <label for="appointmentTimeAdmin" class="block text-sm font-medium text-gray-700 mb-1">Appointment
+                        Time</label>
+                    <input type="datetime-local" id="appointmentTimeAdmin"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
                 </div>
-                
-                <button id="assignDoctorBtn" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+
+                <button id="assignDoctorBtn"
+                    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Assign Doctor
                 </button>
-                
+
                 <div class="mt-6">
                     <h3 class="text-lg font-semibold text-gray-800 mb-3">Doctor Availability</h3>
                     <div id="doctorAvailability" class="space-y-2">
@@ -415,51 +623,68 @@
                     </div>
                 </div>
             </div>
+
         </div>
-        
+
         <!-- Receipt Generation -->
         <div class="mt-6 bg-white rounded-xl shadow-md p-6">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Generate Receipt</h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                    <label for="receiptTokenInput" class="block text-sm font-medium text-gray-700 mb-1">Token Number</label>
-                    <input type="text" id="receiptTokenInput" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter token number">
+                    <label for="receiptTokenInput" class="block text-sm font-medium text-gray-700 mb-1">Token
+                        Number</label>
+                    <input type="text" id="receiptTokenInput"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter token number">
                 </div>
                 <div>
-                    <label for="receiptPatientName" class="block text-sm font-medium text-gray-700 mb-1">Patient Name</label>
-                    <input type="text" id="receiptPatientName" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Patient name">
+                    <label for="receiptPatientName" class="block text-sm font-medium text-gray-700 mb-1">Patient
+                        Name</label>
+                    <input type="text" id="receiptPatientName"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Patient name">
                 </div>
                 <div>
-                    <label for="receiptDoctorName" class="block text-sm font-medium text-gray-700 mb-1">Doctor Name</label>
-                    <input type="text" id="receiptDoctorName" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Doctor name">
+                    <label for="receiptDoctorName" class="block text-sm font-medium text-gray-700 mb-1">Doctor
+                        Name</label>
+                    <input type="text" id="receiptDoctorName"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Doctor name">
                 </div>
                 <div class="md:col-span-2">
-                    <label for="receiptDiagnosis" class="block text-sm font-medium text-gray-700 mb-1">Diagnosis/Treatment</label>
-                    <input type="text" id="receiptDiagnosis" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter diagnosis or treatment">
+                    <label for="receiptDiagnosis"
+                        class="block text-sm font-medium text-gray-700 mb-1">Diagnosis/Treatment</label>
+                    <input type="text" id="receiptDiagnosis"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter diagnosis or treatment">
                 </div>
                 <div>
                     <label for="receiptAmount" class="block text-sm font-medium text-gray-700 mb-1">Amount</label>
-                    <input type="number" id="receiptAmount" class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Enter amount">
+                    <input type="number" id="receiptAmount"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                        placeholder="Enter amount">
                 </div>
             </div>
-            
+
             <div class="mt-4 flex justify-end space-x-3">
-                <button id="previewReceiptBtn" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="previewReceiptBtn"
+                    class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     Preview Receipt
                 </button>
-                <button id="generateReceiptBtn" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                <button id="generateReceiptBtn"
+                    class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
                     Generate Receipt
                 </button>
             </div>
-            
+
             <!-- Receipt Preview -->
             <div id="receiptPreview" class="mt-6 hidden bg-white border rounded-lg p-6">
                 <div class="text-center mb-4">
                     <h2 class="text-xl font-bold text-blue-800">WELLCARE MEDICAL CENTER</h2>
                     <p class="text-gray-600">123 Health Street, Medical City</p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                         <h3 class="font-medium text-gray-800 mb-2">Patient Details</h3>
@@ -472,24 +697,31 @@
                         <p><span class="font-medium">Date:</span> <span id="previewDate">-</span></p>
                     </div>
                 </div>
-                
+
                 <div class="mb-6">
                     <h3 class="font-medium text-gray-800 mb-2">Diagnosis/Treatment</h3>
                     <p id="previewDiagnosis">-</p>
                 </div>
-                
+
                 <div class="border-t pt-4">
                     <h3 class="font-medium text-gray-800 mb-2">Payment Details</h3>
                     <p><span class="font-medium">Amount:</span> $<span id="previewAmount">0</span></p>
                 </div>
-                
+
                 <div class="mt-8 text-center text-sm text-gray-500">
                     <p>Thank you for choosing WELLCARE. Please bring this receipt to your appointment.</p>
                 </div>
+
             </div>
+
         </div>
+
+
     </div>
+
+
     <script src="./script.js"></script>
+
 </body>
 
 </html>

@@ -137,6 +137,11 @@ body {
     opacity: 0.8;
 }
 
+#userLandingPage{
+    margin: 0;
+    padding: 0;
+}
+
 /* Form Elements */
 .input-group, .checkbox-group {
     margin-bottom: 15px;
@@ -470,4 +475,43 @@ body {
         grid-template-columns: 2fr 1fr;
         gap: 30px;
     }
+}
+
+/*******************************************************************/
+.hero-gradient {
+    background: linear-gradient(135deg, #c830ff 0%, #3262e9 100%);
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.transition-all {
+    transition: all 0.3s ease;
+}
+.doctor-card:hover .doctor-image {
+    transform: scale(1.05);
+}
+.time-slot:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+.selected-slot {
+    background-color: #3b82f6 !important;
+    color: white !important;
+    border-color: #3b82f6 !important;
+}
+.login-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.login-modal.active {
+    display: flex;
 }
