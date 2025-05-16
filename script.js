@@ -1,9 +1,9 @@
 const doctorsData = [
-    { id: 'dr1', name: 'Dr. Sarah Johnson', specialization: 'General Physician', symptoms: ['fever', 'cough', 'headache', 'fatigue'] },
-    { id: 'dr2', name: 'Dr. Michael Chen', specialization: 'Cardiologist', symptoms: ['dizziness', 'fatigue'] },
-    { id: 'dr3', name: 'Dr. Lisa Park', specialization: 'Pediatrician', symptoms: ['fever', 'cough', 'stomachache'] },
-    { id: 'dr4', name: 'Dr. Robert Smith', specialization: 'Neurologist', symptoms: ['headache', 'dizziness'] },
-    { id: 'dr5', name: 'Dr. Emily Wilson', specialization: 'Gastroenterologist', symptoms: ['stomachache'] }
+    { id: 'dr1', name: 'Dr. Sarana Khan', specialization: 'General Physician', symptoms: ['fever', 'cough', 'headache', 'fatigue'] },
+    { id: 'dr2', name: 'Dr. Mohan Sharma', specialization: 'Cardiologist', symptoms: ['dizziness', 'fatigue'] },
+    { id: 'dr3', name: 'Dr. Lalit Vishwakarma', specialization: 'Pediatrician', symptoms: ['fever', 'cough', 'stomachache'] },
+    { id: 'dr4', name: 'Dr. Roshan Kumar', specialization: 'Neurologist', symptoms: ['headache', 'dizziness'] },
+    { id: 'dr5', name: 'Dr. Rahul Subramaniam', specialization: 'Gastroenterologist', symptoms: ['stomachache'] }
 ];
 
 const clinicsData = [
@@ -138,7 +138,7 @@ logoutBtn.addEventListener('click', () => {
 adminLogoutBtn.addEventListener('click', () => {
     adminLandingPage.classList.add('hidden');
     loginPage.classList.remove('hidden');
-    resetUserSession();
+    // resetAdminSession();
 });
 
 backToDashboard.addEventListener('click', () => {
