@@ -390,16 +390,16 @@ function recommendDoctors() {
 
     matchedDoctors.forEach(doctor => {
         const doctorCard = document.createElement('div');
-        doctorCard.className = 'border rounded-lg p-4 hover:bg-blue-50 cursor-pointer transition-colors';
+        doctorCard.className = 'border rounded-lg p-4 hover:bg-gray-700 cursor-pointer transition-colors';
         doctorCard.innerHTML = `
                     <div class="flex items-start">
                         <div class="bg-blue-100 p-3 rounded-full mr-4">
                             <i class="fas fa-user-md text-blue-600"></i>
                         </div>
                         <div>
-                            <h3 class="font-medium text-gray-800">${doctor.name}</h3>
-                            <p class="text-sm text-gray-500">${doctor.specialization}</p>
-                            <p class="text-xs text-gray-500 mt-1">Specializes in: ${doctor.symptoms.map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', ')}</p>
+                            <h3 class="font-medium text-yellow-400">${doctor.name}</h3>
+                            <p class="text-sm text-white">${doctor.specialization}</p>
+                            <p class="text-xs text-white mt-1">Specializes in: ${doctor.symptoms.map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', ')}</p>
                         </div>
                     </div>
                 `;
@@ -446,20 +446,20 @@ function loadPendingAppointments() {
     pendingAppointments.forEach(appointment => {
         // Add to pending appointments list
         const appointmentCard = document.createElement('div');
-        appointmentCard.className = 'border rounded-lg p-4 hover:bg-blue-50 transition-colors';
+        appointmentCard.className = 'border rounded-lg p-4 transition-colors';
         appointmentCard.innerHTML = `
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="font-medium text-gray-800">${appointment.patientName}</h3>
-                            <p class="text-sm text-gray-500">Token: ${appointment.token}</p>
-                            <p class="text-sm text-gray-500">Symptoms: ${appointment.symptoms.map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', ')}</p>
+                            <h3 class="font-medium text-green-400">${appointment.patientName}</h3>
+                            <p class="text-sm text-gray-200">Token: ${appointment.token}</p>
+                            <p class="text-sm text-gray-200">Symptoms: ${appointment.symptoms.map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', ')}</p>
                         </div>
                         <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Pending</span>
                     </div>
                     <div class="mt-3 flex justify-between items-center">
                         <div>
-                            <p class="text-sm text-gray-700">Requested: ${new Date(appointment.createdAt).toLocaleString()}</p>
-                            <p class="text-sm text-gray-700">Age: ${appointment.patientAge}</p>
+                            <p class="text-sm text-gray-300">Requested: ${new Date(appointment.createdAt).toLocaleString()}</p>
+                            <p class="text-sm text-gray-300">Age: ${appointment.patientAge}</p>
                             ${appointment.isEmergency ? '<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Emergency</span>' : ''}
                         </div>
                         <div class="flex space-x-2">
@@ -523,7 +523,7 @@ function updateDoctorAvailability() {
         doctorDiv.className = 'flex items-center justify-between p-2 bg-gray-50 rounded';
         doctorDiv.innerHTML = `
                     <div>
-                        <p class="font-medium">${doctor.name}</p>
+                        <p class="font-medium text-black">${doctor.name}</p>
                         <p class="text-sm text-gray-500">${doctor.specialization}</p>
                     </div>
                     <span class="${isAvailable ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'} text-xs px-2 py-1 rounded-full">
