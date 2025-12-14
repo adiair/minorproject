@@ -124,12 +124,12 @@ body {
 }
 
 .user-login-tab {
-    background-color: #007bff;
+    background-color: #d0ff00;
     color: #fff;
 }
 
 .admin-login-tab {
-    background-color: #e0e0e0;
+    background-color: #d0ff00;
     color: #333;
 }
 
@@ -165,7 +165,7 @@ body {
 .generate-username {
     display: inline-block;
     margin-top: 5px;
-    color: #007bff;
+    color: #ffe100;
     background: none;
     border: none;
     cursor: pointer;
@@ -173,7 +173,7 @@ body {
 }
 
 .generate-username:hover {
-    color: #0056b3;
+    color: #ffe100;
 }
 
 .checkbox {
@@ -190,7 +190,7 @@ body {
     padding: 10px;
     font-size: 16px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #e6ff07;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -198,7 +198,7 @@ body {
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+    background-color: #edfa00;
 }
 
 /* Hidden Form */
@@ -227,7 +227,7 @@ body {
 .header-title {
     font-size: 24px;
     font-weight: bold;
-    color: #1e3a8a;
+    color: #ffe100;
     margin: 0;
 }
 
@@ -245,7 +245,7 @@ body {
 
 .user-token {
     background-color: #bfdbfe;
-    color: #1e3a8a;
+    color: #ffe100;
     padding: 8px 12px;
     border-radius: 9999px;
     font-size: 14px;
@@ -393,7 +393,7 @@ body {
     margin-top: 20px;
     padding: 10px;
     width: 100%;
-    background-color: #007bff;
+    background-color: #ffe100;
     color: white;
     border: none;
     border-radius: 6px;
@@ -401,7 +401,7 @@ body {
 }
 
 .confirm-btn:hover {
-    background-color: #0056b3;
+    background-color: #ffe100;
 }
 
 /* Quick Info Panel */
@@ -431,7 +431,7 @@ body {
 .info-detail {
     font-size: 16px;
     font-weight: bold;
-    color: #007bff;
+    color: #fff707;
 }
 
 /* Emergency Contacts */
@@ -479,7 +479,7 @@ body {
 
 /*******************************************************************/
 .hero-gradient {
-    background: linear-gradient(135deg, #c830ff 0%, #3262e9 100%);
+    background: linear-gradient(135deg, #c830ff 0%, #ffe100 100%);
 }
 .card-hover:hover {
     transform: translateY(-5px);
@@ -492,13 +492,13 @@ body {
     transform: scale(1.05);
 }
 .time-slot:hover {
-    background-color: #3b82f6;
+    background-color: #ffe100;
     color: white;
 }
 .selected-slot {
     background-color: #3b82f6 !important;
     color: white !important;
-    border-color: #3b82f6 !important;
+    border-color: #caed04 !important;
 }
 .login-modal {
     display: none;
